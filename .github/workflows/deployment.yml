@@ -40,7 +40,7 @@ jobs:
       matrix:
         node-version: [14, 16]
         os: [ubuntu-latest, windows-latest]
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Get repository code
         uses: actions/checkout@v3
